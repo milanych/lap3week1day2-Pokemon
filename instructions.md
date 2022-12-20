@@ -11,7 +11,7 @@ Two exercises:
 - Exercise #1: 1h
 - Exercise #2: 1h
 
-Note that times are approximate and you can decide how much time you spent on each exercise
+Note that times are approximate and you can decide how much time you spend on each exercise
 
 ### Team
 
