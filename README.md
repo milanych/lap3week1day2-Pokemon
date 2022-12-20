@@ -1,6 +1,6 @@
-# %MODULE-NAME%
+# React Exercises
 
-This repository contains resources (including exemplars, instructions, and starter code) for the **%MODULE-NAME%** module.
+This repository contains all the exercises briefs for the **React** week.
 
 ## Set-up
 
@@ -14,4 +14,10 @@ To access a resource, switch to the relevant branch and read [`instructions.md`]
 
 | Resource | Branch |
 | --- | --- |
-| resource_name | `branch_name` |
+| Intro to React Exercises | `react-exercises` |
+| React Props Exercises | `react-props-exercises` |
+| React useEffect Exercises | `react-useEffect-exercises` |
+| React Navigation Exercises | `react-navigation-exercises` |
+| React Testing Exercises | `react-testing-exercises` |
+| React useContext Exercises | `react-useContext-exercises` |
+| Redux Exercises | `redux-exercises` |
