@@ -1,50 +1,28 @@
-import React, {useState} from "react";
-import {Pokedex} from "./components/";
+import React, {useState, useEffect} from "react";
+import {Pokedex, Pokeform} from "./components/";
 import './css/App.css';
 
-const pokemon = 
-  [
-    {
-      id: 1,
-      name: "Charmander",
-      type: "fire",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    },
-    {
-      id: 2,
-      name: "Squirtle",
-      type: "water",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-    },
-    {
-      id: 3,
-      name: "Butterfree",
-      type: "flying",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
-    },
-    {
-      id: 4,
-      name: "Rattata",
-      type: "normal",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
-    },
-    {
-      id: 5,
-      name: "Metapod",
-      type: "bug",
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
-    }
-  ]
-
 export default function App() {
+  const [inputText, setInputText] = useState('');
+  const [pokemonList, setPokemons] = useState([])
+    
+  useEffect(() => {
+    getPokemonInfo(inputText)
+  }, [inputText])
+  const getPokemonInfo = async (name) => {
+    try {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+      const result = await response.json();
+      setPokemons(result)
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
   return (
     <>
-      <Pokedex pokemons={pokemon}/>
+      <Pokeform inputText={inputText} setInputText={setInputText} pokemonList={pokemonList} setPokemons={setPokemons}/>
+      <Pokedex pokemonList={pokemonList}/>
     </>
   )
 }

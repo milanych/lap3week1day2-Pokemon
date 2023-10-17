@@ -5,8 +5,8 @@ export default function Pokecard({pokemon}) {
     <>
     <div className="pokemonCard">
       <h2>{pokemon.name}</h2>
-      <img src={pokemon.image}/>
-      <p>Type: {pokemon.type}</p>
+      <img src={pokemon.sprites.front_default}/>
+      <p>Type: {pokemon.types[0].type}</p>
     </div>
     </>
   )  
