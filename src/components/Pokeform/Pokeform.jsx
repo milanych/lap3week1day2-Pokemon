@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-export default function Pokeform({inputText, setInputText, pokemonList, setPokemons}) {
+export default function Pokeform({inputText, setInputText, pokemon, setPokemon}) {
   const handleInput = (e) => setInputText(e.target.value)
   const handleSubmit = (e) => {
     e.preventDefault()
-    setPokemons([
-      pokemonList,
-      {name: inputText}
+    setPokemon([
+      ...pokemon,
+      {name: pokemon.name, order: pokemon.order}
     ])
 
     // setInputText('')

@@ -7,9 +7,13 @@ export default function Pokedex({pokemon}) {
     <>
       <h1>Pokedex</h1>
       <div className="pokemon">
-      {/* {pokemon.map((p,i) => {
-        <Pokecard p={p} key={i}/>
-      })}  */}
+         {pokemon.map((pikapika,i) => {
+
+         <Pokecard key={i} pikapika={pikapika}/>
+         })} 
+
+
+        
       </div>
     </>
   )
