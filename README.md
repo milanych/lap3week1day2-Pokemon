@@ -1,4 +1,4 @@
-*I don't know what to write here, so...*
+![image](https://raw.githubusercontent.com/milanych/lap3week1day2-Pokemon/exercise-2/readme.gif)
 
 ### Pokemon Theme lyrics
 ```
