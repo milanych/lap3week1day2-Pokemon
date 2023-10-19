@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Pokecard from '../Pokecard/Pokecard';
 
 
-export default function Pokedex({pokemon}) {
+export default function Pokedex({pokemonList}) {
+  if(pokemonList.length === 0) {
+    return (
+      <>
+      <div className="pokemon">no pokemon yet, please submit a pokemon!</div>
+      </>
+      )
+  }
   return (
     <>
-      <h1>Pokedex</h1>
       <div className="pokemon">
-         {pokemon.map((pikapika,i) => {
-
-         <Pokecard key={i} pikapika={pikapika}/>
-         })} 
-
-
-        
+        {pokemonList.map((pokemon, index) => (
+         <Pokecard pokemon={pokemon} key={index}/>
+        ))}  
       </div>
     </>
   )
